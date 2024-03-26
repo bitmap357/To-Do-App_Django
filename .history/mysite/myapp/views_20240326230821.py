@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from .models import Task
 
 # Create your views here.
 def add(request):
@@ -8,6 +7,5 @@ def add(request):
         priority = request.POST.get('priority', '')
         
         task = Task(name=name, priority=priority)
-        task.save()
         
     return render(request, 'myapp/add.html')
