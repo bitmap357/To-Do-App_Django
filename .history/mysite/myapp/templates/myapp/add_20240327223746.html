@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+
+<div class="container">
+    
+</div>
+<form class="p-3 shadow" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Task">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="priority" id="priority" placeholder="Enter Priority">
+    </div>
+    <input class="btn btn-success" type="submit">
+</form>
+{% endblock %}
