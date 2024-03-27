@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="text"  name="name" id="name" placeholder="Enter Task">
+    </div>
+    <input type="text" name="priority" id="priority" placeholder="Enter Priority">
+    <input type="submit">
+</form>
+{% endblock %}
